@@ -131,16 +131,16 @@ function init_custom_gateway_class(){
             //Gets Total Amount
             $amount=$order->get_total();
             
-            $status = 'wc-' === substr( $this->order_status, 0, 3 ) ? substr( $this->order_status, 3 ) : $this->order_status;
+           // $status = 'wc-' === substr( $this->order_status, 0, 3 ) ? substr( $this->order_status, 3 ) : $this->order_status;
 
             // Set order status
-            $order->update_status( $status, __( 'Checkout with custom payment. ', $this->domain ) );
+           // $order->update_status( $status, __( 'Checkout with custom payment. ', $this->domain ) );
 
             // Reduce stock levels
-            $order->reduce_order_stock();
+            //$order->reduce_order_stock();
             
             // Remove cart
-            WC()->cart->empty_cart();
+            //WC()->cart->empty_cart();
 
             //Converts Object Into Array
             $order_object = json_decode($order);
